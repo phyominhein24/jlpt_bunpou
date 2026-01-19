@@ -1,0 +1,78 @@
+body {
+margin: 0;
+font-family: 'Noto Sans JP', 'Noto Sans Myanmar', sans-serif;
+background: #f5f7fb;
+color: #1f2937;
+}
+
+
+.container {
+max-width: 900px;
+margin: auto;
+padding: 24px;
+}
+
+
+h1, h2 {
+color: #1e40af;
+}
+
+
+.grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+gap: 16px;
+}
+
+
+.level {
+background: linear-gradient(135deg, #3b82f6, #1e3a8a);
+color: white;
+padding: 24px;
+border-radius: 12px;
+text-align: center;
+text-decoration: none;
+font-size: 20px;
+}
+
+
+.card {
+display: block;
+background: white;
+padding: 16px;
+border-radius: 12px;
+margin-bottom: 12px;
+text-decoration: none;
+color: inherit;
+}
+
+
+.example {
+background: #eef2ff;
+padding: 12px;
+border-radius: 8px;
+margin-top: 8px;
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+}
+
+.index {
+    color: #888;
+}
