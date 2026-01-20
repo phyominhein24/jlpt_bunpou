@@ -81,7 +81,7 @@ export default function GrammarList() {
     <div className="container">
       {/* Top bar */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
-        <button onClick={() => navigate(-1)} className="back-btn">←</button>
+        <button onClick={() => navigate('/')} className="back-btn">←</button>
         <div style={{ lineHeight: 1.1 }}>
           <div style={{ fontSize: 18, fontWeight: 800 }}>{level} Grammar</div>
           <div style={{ fontSize: 12, opacity: 0.7 }}>Showing {filtered.length} items</div>
@@ -187,7 +187,7 @@ export default function GrammarList() {
           }}
         >
           <div style={{ display: 'flex', gap: 10, alignItems: 'baseline' }}>
-            <div style={{ fontWeight: 800, opacity: 0.6, minWidth: 42 }}>{i + 1}.</div>
+            <div style={{ fontWeight: 800, opacity: 0.6, minWidth: 42 }}>{getIdNumber(g.id)}.</div>
             <div style={{ flex: 1 }}>
               <div style={{ fontWeight: 800, fontSize: 16 }}>{g.grammar}</div>
               <div style={{ opacity: 0.75, marginTop: 4 }}>{g.meaning_mm}</div>

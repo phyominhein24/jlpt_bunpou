@@ -64,6 +64,9 @@ export default function GrammarDetail() {
   const prevItem = index > 0 ? list[index - 1] : null
   const nextItem = index >= 0 && index < list.length - 1 ? list[index + 1] : null
 
+  const keep = `?sort=${sortDir}&from=${fromNum}&to=${toNum}&q=${encodeURIComponent(q)}`
+  const listUrl = `/grammar/${level}${keep}`
+
   const keepQuery = `?sort=${sortDir}&from=${fromNum}&to=${toNum}&q=${encodeURIComponent(q)}`
 
   if (!item) return <p>Not found</p>
@@ -72,7 +75,7 @@ export default function GrammarDetail() {
     <div className="container">
       {/* Top bar */}
       <div style={{ display: 'flex', gap: 8, alignItems: 'center', marginBottom: 14, flexWrap: 'wrap' }}>
-        <button onClick={() => navigate(-1)} className="back-btn">← Back</button>
+        <button onClick={() => navigate(listUrl)}>← Back to List</button>
 
         <button
           onClick={() => prevItem && navigate(`/grammar/${level}/${prevItem.id}${keepQuery}`)}
@@ -89,7 +92,7 @@ export default function GrammarDetail() {
         </button>
 
         <div style={{ marginLeft: 'auto', fontSize: 12, opacity: 0.7 }}>
-          {index + 1} / {list.length} • Order: {sortDir.toUpperCase()}
+          {getIdNumber()} / {list.length} • Order: {sortDir.toUpperCase()}
         </div>
       </div>
 
