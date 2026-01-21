@@ -64,6 +64,7 @@ export default function KanjiDetail() {
     <div className="container">
       <div style={{ display:'flex', gap:8, alignItems:'center', marginBottom: 14, flexWrap:'wrap' }}>
         <button onClick={() => navigate(listUrl)}>← Back to List</button>
+        <button onClick={() => navigate(-1)}>← Back </button>
         <button disabled={!prev} onClick={()=> prev && navigate(`/kanji/${level}/${prev.id}${keep}`)}>← Prev</button>
         <button disabled={!next} onClick={()=> next && navigate(`/kanji/${level}/${next.id}${keep}`)}>Next →</button>
         <div style={{ marginLeft:'auto', fontSize:12, opacity:0.7 }}>{idx+1} / {list.length}</div>
